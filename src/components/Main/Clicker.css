@@ -3,12 +3,11 @@
     margin: auto;
 }
 
-.chewie{
-    width: 100%;
+.clicker-wookie:active{
+    animation: zoomOff;
+    animation-duration: 0.1s;
 }
 
-@media screen and (min-width: 800px) {
-    .clicker-wookie{
-        width: 30%;
-    }
+.chewie{
+    width: 100%;
 }

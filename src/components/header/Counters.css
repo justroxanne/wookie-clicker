@@ -10,7 +10,7 @@
     font-family: var(--main-font);
     color: var(--main-color);
     background-color: var(--background-counters-color);
-    padding: 2%;
+    padding: 3%;
     border-radius: 15px;
     width: 100%;
 }

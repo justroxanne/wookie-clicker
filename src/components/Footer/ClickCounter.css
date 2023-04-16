@@ -1,0 +1,13 @@
+.click-counter{
+    margin: auto;
+    text-align: center;
+    height: 60%;
+    width: 30%;
+    background-color: var(--background-counters-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    font-family: var(--main-font);
+    color: var(--main-color);
+}

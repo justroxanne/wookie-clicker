@@ -1,0 +1,14 @@
+.clicker-wookie{
+    width: 100%;
+    margin: auto;
+}
+
+.chewie{
+    width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+    .clicker-wookie{
+        width: 30%;
+    }
+}

@@ -5,7 +5,7 @@ import './SettingsButton.css'
 const SettingsButton = () => {
   return (
    <div className='settings-button'>
-        <img className='death-star'src={deathStar} alt='kawaii death star button' width='80%'/>
+        <img className='death-star'src={deathStar} alt='kawaii death star button'/>
     </div>
   )
 }

@@ -1,8 +1,11 @@
 import React from 'react'
 
-const Bank = () => {
+const Bank = ({count}) => {
   return (
-    <div className='bank counter'>Bank : 0</div>
+    <div className='bank counter'>
+      <p>Bank :&nbsp;</p>
+      <p> {count}</p>
+    </div>
   )
 }
 

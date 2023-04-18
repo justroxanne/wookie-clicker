@@ -45,6 +45,11 @@
     filter: saturate(0) opacity(60%);
 }
 
+.helpers:hover{
+    animation: zoomOff;
+    animation-duration: 0.1s;
+}
+
 @media screen and (min-width: 800px){
 
     .clickers-container{

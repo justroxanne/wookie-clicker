@@ -4,12 +4,12 @@ import CreditPerClic from './CreditPerClic';
 import Bank from './Bank';
 import './Counters.css';
 
-const Counters = ({count}) => {
+const Counters = () => {
   return (
     <div className='counters-container'>
       <CreditPerSecond />
       <CreditPerClic />
-      <Bank count={count}/>
+      <Bank />
     </div>
   )
 }

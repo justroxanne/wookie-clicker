@@ -1,17 +1,17 @@
 import React from 'react';
 import Clicker from './Clicker';
-import HelperPorg from './HelperPorg';
-import HelperEwok from './HelperEwok';
-import HelperC3po from './HelperC3po';
-import HelperR2d2 from './HelperR2d2';
-import HelperXwing from './HelperXwing';
-import HelperFalcon from './HelperFalcon';
+import HelperPorg from './GameHelpers/HelperPorg';
+import HelperEwok from './GameHelpers/HelperEwok';
+import HelperC3po from './GameHelpers/HelperC3po';
+import HelperR2d2 from './GameHelpers/HelperR2d2';
+import HelperXwing from './GameHelpers/HelperXwing';
+import HelperFalcon from './GameHelpers/HelperFalcon';
 import './ClickersContainer.css';
 
-const ClickersContainer = ({moreCredits, count}) => {
+const ClickersContainer = () => {
   return (
     <div className='clickers-container'>
-      <Clicker moreCredits={moreCredits} count={count}/>
+      <Clicker />
       <HelperPorg />
       <HelperEwok />
       <HelperC3po />
@@ -22,4 +22,4 @@ const ClickersContainer = ({moreCredits, count}) => {
   )
 }
 
-export default ClickersContainer
+export default ClickersContainer;

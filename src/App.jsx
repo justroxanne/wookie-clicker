@@ -1,39 +1,36 @@
-import './App.css';
-import React, {useState, useRef } from 'react'
-import Counters from './components/header/Counters';
-import SettingsButton from './components/header/SettingsButton';
+import React, { useState, useRef, useContext } from 'react';
+import { CountContext } from './utils/Context';
+import Counters from './components/Header/Counters/Counters';
+import SettingsButton from './components/Header/SettingsButton';
 import ClickersContainer from './components/Main/ClickersContainer';
 import ClickCounter from './components/Footer/ClickCounter';
 import Overlay from './components/Overlay/Overlay';
+import Confettis from './components/Confettis';
+import Message from './components/EndGame/Message';
+import './App.css';
 
 function App() {
-
-  const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const target = useRef(null);
-
+  const { count, displayConfetti, displayMessage } = useContext(CountContext);
   const displaySettings = () => {
     setIsVisible(!isVisible);
-  }
-
-  const moreCredits = () => {
-      setCount(count + 1);
-  }
+  };
 
   return (
-    <div className="App">
+    <div className='App'>
+      {displayConfetti && <Confettis />}
+      {isVisible && <Overlay target={target} />}
+      {displayMessage && <Message />}
       <header>
-        <Counters count={count}/>
-        <SettingsButton displaySettings={displaySettings} target={target}/>
+        <Counters key={`Counters-${count}`} />
+        <SettingsButton displaySettings={displaySettings} target={target} />
       </header>
-      <section>
-        {isVisible && <Overlay  target={target}/>}
-      </section>
       <main>
-        <ClickersContainer moreCredits={moreCredits} count={count}/>
+        <ClickersContainer />
       </main>
       <footer>
-        <ClickCounter count={count}/>
+        <ClickCounter key={`ClickCounter-${count}`} />
       </footer>
     </div>
   );

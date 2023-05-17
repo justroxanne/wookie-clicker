@@ -1,0 +1,16 @@
+.settings-button{
+    width: 20%;
+    text-align: end;
+    z-index: 3;
+}
+
+.death-star{
+    max-height: 100%;
+    max-width: 100%;
+    padding: 2%;
+}
+
+.death-star:active{
+    animation: zoomOff;
+    animation-duration: 0.1s;
+}

@@ -24,47 +24,28 @@ export const CountProvider = ({ children }) => {
     setBank(bank + countPower);
   };
 
-  const unlockHelperPorg = () => {
-    if (bank >= 50) {
-      setAutoIncrement(true);
-      setBank(bank - 50);
-      setCreditSecond(creditSecond + 1);
-    }
-  };
-
-  const unlockHelperEwok = () => {
-    if (bank >= 100) {
-      setCountPower(countPower + 1);
-      setBank(bank - 100);
-    }
-  };
-
-  const unlockHelperC3po = () => {
-    if (bank >= 500) {
-      setBank(bank - 500);
-      setCreditSecond(creditSecond + 10);
-    }
-  };
-
-  const unlockHelperR2d2 = () => {
-    if (bank >= 1000) {
-      setCountPower(countPower + 10);
-      setBank(bank - 1000);
-    }
-  };
-
-  const unlockHelperXwing = () => {
-    if (bank >= 10000) {
-      setCountPower(countPower + 100);
-      setBank(bank - 10000);
-    }
-  };
-
   const unlockFalcon = () => {
     if (bank >= 1000000) {
       setBank(bank - 1000000);
       setDisplayConfetti(true);
       setDisplayMessage(true);
+    }
+  };
+
+  const unlockClicHelper = (cost, power) => {
+    if (bank >= cost) {
+      setCountPower(countPower + power);
+      setBank(bank - cost);
+    }
+  };
+
+  const unlockSecondPowerHelper = (cost, power) => {
+    if (bank >= cost) {
+      if (autoIncrement == false) {
+        setAutoIncrement(true);
+      }
+      setBank(bank - cost);
+      setCreditSecond(creditSecond + power);
     }
   };
 
@@ -94,12 +75,9 @@ export const CountProvider = ({ children }) => {
         displayMessage,
         manualClick,
         moreCredits,
-        unlockHelperPorg,
-        unlockHelperEwok,
-        unlockHelperC3po,
-        unlockHelperR2d2,
-        unlockHelperXwing,
         unlockFalcon,
+        unlockClicHelper,
+        unlockSecondPowerHelper,
       }}
     >
       {children}

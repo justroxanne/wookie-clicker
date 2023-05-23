@@ -3,8 +3,9 @@ import Ewok from '../../../assets/Images/ewok.png';
 import { CountContext } from '../../../utils/Context';
 
 const HelperEwok = () => {
-  const { bank, unlockHelperEwok } = useContext(CountContext);
-  let cost = 100;
+  const { bank, unlockClicHelper } = useContext(CountContext);
+  const cost = 100;
+  const power = 1;
 
   return (
     <div
@@ -13,7 +14,7 @@ const HelperEwok = () => {
       }
     >
       <img
-        onClick={unlockHelperEwok}
+        onClick={() => unlockClicHelper(cost, power)}
         src={Ewok}
         alt='kawaii ewok'
         width='100%'

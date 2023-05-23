@@ -3,8 +3,9 @@ import Xwing from '../../../assets/Images/xwing.png';
 import { CountContext } from '../../../utils/Context';
 
 const HelperXwing = () => {
-  const { bank, unlockHelperXwing } = useContext(CountContext);
-  let cost = 10000;
+  const { bank, unlockClicHelper } = useContext(CountContext);
+  const cost = 10000;
+  const power = 100;
 
   return (
     <div
@@ -13,7 +14,7 @@ const HelperXwing = () => {
       }
     >
       <img
-        onClick={unlockHelperXwing}
+        onClick={() => unlockClicHelper(cost, power)}
         src={Xwing}
         alt='kawaii xwing'
         width='100%'

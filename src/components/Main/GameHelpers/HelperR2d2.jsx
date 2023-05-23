@@ -3,8 +3,9 @@ import R2D2 from '../../../assets/Images/R2D2.png';
 import { CountContext } from '../../../utils/Context';
 
 const HelperR2d2 = () => {
-  const { bank, unlockHelperR2d2 } = useContext(CountContext);
-  let cost = 1000;
+  const { bank, unlockClicHelper } = useContext(CountContext);
+  const cost = 1000;
+  const power = 10;
 
   return (
     <div
@@ -13,7 +14,7 @@ const HelperR2d2 = () => {
       }
     >
       <img
-        onClick={unlockHelperR2d2}
+        onClick={() => unlockClicHelper(cost, power)}
         src={R2D2}
         alt='kawaii R2D2'
         width='100%'

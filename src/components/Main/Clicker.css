@@ -11,16 +11,3 @@
 .chewie {
   width: 100%;
 }
-
-.floating-point {
-  user-select: none;
-  position: fixed;
-  top: 40%;
-  left: 50%;
-  font-family: var(--second-font);
-  color: whitesmoke;
-  font-size: 2em;
-  font-weight: 700;
-  animation: byebye 3s;
-  animation-fill-mode: forwards;
-}

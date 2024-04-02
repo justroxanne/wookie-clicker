@@ -1,7 +1,7 @@
-import React, { useContext, useRef, useState } from 'react';
-import { CountContext } from '../../utils/Context';
-import Chewie from '../../assets/Images/chewie.png';
-import './Clicker.css';
+import React, { useContext, useRef } from "react";
+import { CountContext } from "../../utils/Context";
+import Chewie from "../../assets/Images/chewie.png";
+import "./Clicker.css";
 
 const Clicker = () => {
   const clicker = useRef(null);
@@ -14,11 +14,11 @@ const Clicker = () => {
     moreCredits();
     manualClick();
 
-    const point = document.createElement('div');
-    point.className = 'floating-point';
+    const point = document.createElement("div");
+    point.className = "floating-point";
     point.innerText = `+${countPower}`;
-    // point.style.left = event.clientX + 'px';
-    // point.style.top = event.clientY + 'px';
+    point.style.left = event.clientX + "px";
+    point.style.top = event.clientY + "px";
 
     document.body.appendChild(point);
 
@@ -28,12 +28,12 @@ const Clicker = () => {
   };
 
   return (
-    <div className='clicker-wookie' ref={clicker}>
+    <div className="clicker-wookie" ref={clicker}>
       <img
-        className='chewie'
+        className="chewie"
         src={Chewie}
         onClick={handleClick}
-        alt='kawaii wookie head'
+        alt="kawaii wookie head"
       />
     </div>
   );

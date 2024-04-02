@@ -1,4 +1,4 @@
-import React, { useState, createContext, useEffect } from 'react';
+import React, { useState, createContext, useEffect } from "react";
 
 export const CountContext = createContext();
 
@@ -41,7 +41,7 @@ export const CountProvider = ({ children }) => {
 
   const unlockSecondPowerHelper = (cost, power) => {
     if (bank >= cost) {
-      if (autoIncrement == false) {
+      if (autoIncrement === false) {
         setAutoIncrement(true);
       }
       setBank(bank - cost);
